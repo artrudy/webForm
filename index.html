@@ -8,9 +8,136 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Web form header</h1>
+    <h1>New customer</h1>
+    <form name="add new user" class="userRegistration" novalidate>
+      <div class="subMenu">
+      <h2>About you </h2>
+      <div class="form-input">
+        <label for="userFirstName">First name</label>
+        <input
+          type="text"
+          id="userFirstName"
+          inputmode="latin-name"
+          name="userFirstName"
+          required
+          autofocus
+        />
+      </div>
 
-    <form action=""></form>
+      <div class="form-input">
+        <label for="userLastName">Last name</label>
+        <input
+          type="text"
+          id="userLastName"
+          inputmode="latin-name"
+          name="userLastName"
+          required
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="userEmail">Email</label>
+        <input
+          type="text"
+          id="userEmail"
+          inputmode="email"
+          name="userEmail"
+          pattern="/^\S+@\S+\.\S+$/"
+          required
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="userPassword">Password</label>
+        <input
+          type="text"
+          id="userPassword"
+          inputmode="text"
+          name="userPassword"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        />
+        <p >
+          Password must contain at least one number and one uppercase and
+          lowercase letter, and at least 8 or more characters
+        </p>
+      </div>
+    </div>
+    <div class="subMenu">
+      <h2 class="subMenu">Shiping information</h2>
+      <div class="form-input">
+        <label for="userPostCode">Post Code</label>
+        <input
+          type="text"
+          id="userPostCode"
+          inputmode="text"
+          name="userPostCode"
+          required
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="userFullAdress">Full adress</label>
+        <input
+          type="text"
+          id="userFullAdress"
+          inputmode="text"
+          name="userFullAdress"
+          required
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="userState">State/ Province</label>
+        <input
+          type="text"
+          id="userState"
+          inputmode="text"
+          name="userState"
+          required
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="userCity">City</label>
+        <input
+          type="text"
+          id="userCity"
+          inputmode="text"
+          name="userCity"
+          required
+        />
+
+
+        <div class="form-input">
+          <label for="userCountry">Country</label>
+          <input
+            type="text"
+            id="userCountry"
+            inputmode="text"
+            name="userCountry"
+            required
+          />
+      </div>
+
+
+      <div class="form-input">
+        <label for="userMobilePhoneNumber">Mobile phone</label>
+        <input
+          type="text"
+          id="userMobilePhoneNumber"
+          inputmode="number"
+          name="userCountry"
+          pattern="\d+" minlength="9" maxlength="13"
+          required
+        />
+    </div>
+      </div>
+
+    <button type="submit">Add</button>
+
+    </form>
+
     <script src="dist/app.js"></script>
   </body>
 </html>
